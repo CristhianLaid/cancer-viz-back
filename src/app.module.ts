@@ -1,7 +1,9 @@
 import { Module } from '@nestjs/common';
+import { GraphModule } from './graph/graph.module';
+import { SampleModule } from './sample/sample.module';
 
 @Module({
-  imports: [],
+  imports: [GraphModule, SampleModule],
   controllers: [],
   providers: [],
 })
