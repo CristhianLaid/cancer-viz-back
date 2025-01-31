@@ -1,7 +1,8 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
-import { GraphService } from './graph.service';
+
 import { CreateGraphDto } from '../dto/create-graph.dto';
 import { UpdateGraphDto } from '../dto/update-graph.dto';
+import { GraphService } from '../services/graph.service';
 
 @Controller('graph')
 export class GraphController {
