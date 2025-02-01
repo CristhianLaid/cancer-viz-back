@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
+import { GraphController } from './graph.controller';
 import { GraphService } from './graph.service';
-import { GraphController } from './controllers/graph.controller';
+
 
 @Module({
   controllers: [GraphController],

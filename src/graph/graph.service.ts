@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
-import { CreateGraphDto } from '../dto/create-graph.dto';
-import { UpdateGraphDto } from '../dto/update-graph.dto';
+import { CreateGraphDto } from './dto/create-graph.dto';
+import { UpdateGraphDto } from './dto/update-graph.dto';
+
 
 
 @Injectable()
