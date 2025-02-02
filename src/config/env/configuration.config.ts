@@ -1,5 +1,5 @@
-import { IEnvConfig } from "../interfaces/env.interface";
 import * as dotenv from 'dotenv'
+import { IEnvConfig } from './interfaces/env.interface';
 
 dotenv.config();
 

@@ -6,7 +6,6 @@ import { SampleModule } from './modules/sample/sample.module';
 import { CommonModule } from './common/common.module';
 import { ConfigModule as AppConfigModule } from './config/config.module';
 import { envConfig } from './config/env/configuration.config';
-import { IEnvConfig } from './config/interfaces/env.interface';
 
 @Module({
   imports: [

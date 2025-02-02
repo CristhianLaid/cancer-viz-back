@@ -1,8 +1,8 @@
 import { Injectable } from "@nestjs/common";
 
 import { ConfigService } from "@nestjs/config";
-import { IConfigCors } from "../interfaces/cors.interface";
-import { IEnvConfig } from "../interfaces/env.interface";
+import { IConfigCors } from "./interfaces/cors.interface";
+import { IEnvConfig } from "../env/interfaces/env.interface";
 
 
 @Injectable()
