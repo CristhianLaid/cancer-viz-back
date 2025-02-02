@@ -17,7 +17,7 @@ export const readCsvFilePlugin = (
     if (!checkFileExists(fullPath)) {
       rejects({
         statusCode: 404,
-        message: `El archivo ${filePath} no existe.`,
+        message: `The file ${filePath} not exists.`,
         error: 'Not Found',
       });
       return;

@@ -11,7 +11,7 @@ export class CorsConfigService {
         private readonly configService: ConfigService<IEnvConfig>
     ){};
 
-    getCorsConfigOptiona(): IConfigCors {
+    getCorsConfigOption(): IConfigCors {
         return {
             origin: this.configService.get("CORS_ORIGIN").split(",") || '*',
             methods: this.configService.get("CORS_METHODS").split(","),
