@@ -1,7 +1,7 @@
 import * as path from 'path';
 import * as fs from 'fs';
 import * as csvParser from 'csv-parser';
-import { checkFileExists } from '../utils/csv.common.utils';
+import { checkFileExists, cleanString } from '../utils/csv.common.utils';
 
 export interface ICsvParserPlugin {
   [key: string]: string;
@@ -26,7 +26,15 @@ export const readCsvFilePlugin = (
     fs.createReadStream(fullPath)
       .pipe(csvParser())
       .on('data', (row) => {
-        result.push(row);
+        // Limpiar las claves de cada fila (row) y los valores
+        const cleanedRow = Object.fromEntries(
+          Object.entries(row)
+          .map(([key, value]) => [
+            cleanString(key),
+            cleanString(String(value)),
+          ])
+        );
+        result.push(cleanedRow); // Añadir la fila limpia
       })
       .on('end', () => resolve(result))
       .on('error', (error) =>

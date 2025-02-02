@@ -1,7 +1,8 @@
 import { Injectable, InternalServerErrorException } from "@nestjs/common";
+import { checkFileExists } from "../utils/csv.common.utils";
+import { ICsvParserPlugin, readCsvFilePlugin } from "../plugin/csv.common.plugin";
 
-import { checkFileExists } from "./utils/csv.common.utils";
-import { ICsvParserPlugin, readCsvFilePlugin } from "./plugin/csv.common.plugin";
+
 
 @Injectable()
 export class CsvCommonService{
@@ -9,7 +10,7 @@ export class CsvCommonService{
         return checkFileExists(filePath);
     };
 
-    async getCsvFile(filePath: string): Promise<ICsvParserPlugin[]> {
+    async getCsvFile(filePath: string) {
         try {
             const data = await readCsvFilePlugin(filePath);
             return data;
