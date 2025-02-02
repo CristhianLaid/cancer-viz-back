@@ -3,4 +3,5 @@ export interface IEnvConfig {
     CORS_ORIGIN:        string;
     CORS_METHODS:       string;
     CORS_CREDENTIALS:   boolean;
+    PORT:               number;
 };
