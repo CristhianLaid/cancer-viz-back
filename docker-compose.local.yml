@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  cancerviz:
+    build: .
+    container_name: cancerviz_app
+    restart: always
+    ports:
+      - "${PORT}:${PORT}"
+    volumes:
+      - .:/app  # Sincroniza tu código local con el contenedor
+      - /app/node_modules  # Evita problemas con dependencias de npm
+    environment:
+      DATABASE_URL: ${DATABASE_URL}
+    env_file:
+      - .env 

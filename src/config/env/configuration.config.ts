@@ -10,6 +10,8 @@ export const validateEnvConfig = (env: NodeJS.ProcessEnv): IEnvConfig => {
         CORS_METHODS: env.CORS_METHODS as string,
         CORS_CREDENTIALS: env.CORS_CREDENTIALS === 'true',
         PORT: Number(env.PORT as string),
+        DATABASE_URL: env.DATABASE_URL as string,
+        NODE_ENV: env.NODE_ENV as string,
     }
     return config;
 }
