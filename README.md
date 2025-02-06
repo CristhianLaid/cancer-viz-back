@@ -97,6 +97,11 @@ docker-compose -f docker-compose.local.yml up --build -d
 ```
 
 ---
+# ✅ Llenar la bd con el semillero, haciedno un post.
+```bash
+http://localhost:3006/cancerviz/seed
+```
+---
 
 # ✅ Conclusión  
 Ahora tienes **CancerViz** funcionando en tu máquina 🎉. Puedes elegir entre ejecutarlo **localmente** o con **Docker**.  
