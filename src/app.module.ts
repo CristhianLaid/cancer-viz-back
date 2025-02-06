@@ -8,7 +8,9 @@ import { ConfigModule as AppConfigModule } from './config/config.module';
 import { envConfig } from './config/env/configuration.config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { IEnvConfig } from './config/env/interfaces/env.interface';
-import { v4 as uuidv4 } from 'uuid';
+import { CoreModule } from './core/core.module';
+import { CancervizModule } from './modules/cancerviz/cancerviz.module';
+
 
 @Module({
   imports: [
@@ -30,6 +32,8 @@ import { v4 as uuidv4 } from 'uuid';
     SampleModule, 
     CommonModule,
     AppConfigModule,
+    CoreModule,
+    CancervizModule,
   ],
   controllers: [],
   providers: [],
