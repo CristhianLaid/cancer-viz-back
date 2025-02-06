@@ -3,7 +3,7 @@
 
 # 🏥 CancerViz - Guía de Instalación y Ejecución  
 
-CancerViz es una plataforma para visualizar datos médicos. Este documento describe cómo configurarlo y ejecutarlo usando **Docker** o de manera local.  
+CancerViz es una plataforma para visualizar datos médicos extraido de https://ngdc.cncb.ac.cn/cancerscem/browse. Este documento describe cómo configurarlo y ejecutarlo usando **Docker** o de manera local.  
 
 ---
 
