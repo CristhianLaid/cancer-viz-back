@@ -97,9 +97,9 @@ docker-compose -f docker-compose.local.yml up --build -d
 ```
 
 ---
-# ✅ Llenar la bd con el semillero, haciedno un post.
+# ✅ Llenar la bd con el semillero, haciendo un post.
 ```bash
-http://localhost:3006/cancerviz/seed
+http://localhost:3000/cancerviz/seed
 ```
 ---
 
