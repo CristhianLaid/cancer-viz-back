@@ -1,2 +1,2 @@
 export * from './cancerviz.controller';
-export * from './cancerviz.project.controller';
+export * from './cancerviz.seed.controller';

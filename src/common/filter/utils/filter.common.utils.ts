@@ -1,7 +1,3 @@
-import { IQueryItemCommon } from '../interfaces/csv.queryItem.common.interface';
-
-
-
 export const convertQueryParamsToConditions = ({
   query,
 }: {

@@ -1,6 +1,6 @@
 import { Controller, Get, Param, Query  } from '@nestjs/common';
 import { GraphService } from '../services/graph.service';
-import { convertQueryParamsToConditions } from 'src/common/csv/utils';
+import { convertQueryParamsToConditions } from 'src/common/filter/utils/filter.common.utils';
 
 @Controller('graph')
 export class GraphController {

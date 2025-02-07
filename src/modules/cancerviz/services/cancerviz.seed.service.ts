@@ -1,6 +1,5 @@
 import { DataSource } from 'typeorm';
 
-import { CsvCommonService } from 'src/common/csv/service';
 import { Cancerviz } from '../entities';
 import {
   BadRequestException,
@@ -8,6 +7,7 @@ import {
   InternalServerErrorException,
   Logger,
 } from '@nestjs/common';
+import { CsvCommonService } from 'src/common/csv/service/csv.common.service';
 
 @Injectable()
 export class CancervizSeedService {
@@ -44,6 +44,10 @@ export class CancervizSeedService {
             sampleId: row['Sample ID'],
             sampleType: row['Sample Type'],
             constructionProtocol: row['Construction Protocol'],
+            age: row['age'],
+            survivalMonths: row['survivalMonths'],
+            tumorSize: row['tumorSize'],
+            metastasisCount: row['metastasisCount'],
             transcriptomeAnalysis: row['Transcriptome Analysis'],
             metabolicProfile: row['Metabolic Profile'],
           })),

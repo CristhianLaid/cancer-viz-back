@@ -3,18 +3,18 @@ import {
   Injectable,
   InternalServerErrorException,
 } from '@nestjs/common';
-import { ICsvFilterCommonCondition } from 'src/common/csv/interfaces/csv.filter.common.interface';
-import { CsvFilterCommonService } from 'src/common/csv/service';
 import { CsvCommonService } from 'src/common/csv/service/csv.common.service';
+import { IFilterCommonCondition } from 'src/common/filter/interfaces/filter.common.interface';
+import { FilterCommonService } from 'src/common/filter/services/filter.common.service';
 
 @Injectable()
 export class GraphService {
   constructor(
     private readonly csvCommonService: CsvCommonService,
-    private readonly csvFilterCommonService: CsvFilterCommonService,
+    private readonly csvFilterCommonService: FilterCommonService,
   ) {}
 
-  async getGraphs(filePath: string, conditions: ICsvFilterCommonCondition[]) {
+  async getGraphs(filePath: string, conditions: IFilterCommonCondition[]) {
     try {
       if (!this.csvCommonService.validateCsvFileExists(filePath)) {
         throw new InternalServerErrorException('Error reading CSV file');
@@ -47,7 +47,7 @@ export class GraphService {
   //   }
 
   private _validateFilterConditions(
-    conditions: ICsvFilterCommonCondition[],
+    conditions: IFilterCommonCondition[],
   ){
     const validFields = [
       'Project ID',

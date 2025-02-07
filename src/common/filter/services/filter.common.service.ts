@@ -1,11 +1,11 @@
 import { Injectable } from '@nestjs/common';
-import { ICsvFilterCommonCondition } from '../interfaces/csv.filter.common.interface';
+import { IFilterCommonCondition } from '../interfaces/filter.common.interface';
 
 @Injectable()
-export class CsvFilterCommonService {
+export class FilterCommonService {
   applyFilters(
     data: Record<string, any>[],
-    conditions: ICsvFilterCommonCondition[],
+    conditions: IFilterCommonCondition[],
   ) {
     if (!conditions || conditions.length === 0) return data;
 
@@ -32,7 +32,7 @@ export class CsvFilterCommonService {
 
   private matchesCondition(
     row: Record<string, any>,
-    condition: ICsvFilterCommonCondition,
+    condition: IFilterCommonCondition,
   ): boolean {
     const fieldValue = (row[condition.field]).toString().trim().toLowerCase();
     const filterValue = condition.value.toString().trim().toLowerCase();

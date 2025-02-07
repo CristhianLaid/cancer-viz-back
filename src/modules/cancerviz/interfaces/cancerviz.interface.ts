@@ -9,6 +9,10 @@ export interface ICancerDataModelBase extends ICoreBaseModel{
     sampleId:                 string;
     sampleType:               string;
     constructionProtocol:     string;
+    age:                      string;
+    survivalMonths:           string;
+    tumorSize:                string;
+    metastasisCount:          string;
     transcriptomeAnalysis:    string;
     metabolicProfile:         string;
 };

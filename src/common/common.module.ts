@@ -1,11 +1,11 @@
 import { Module } from '@nestjs/common';
 import { CsvCommonService } from './csv/service/csv.common.service';
-import { CsvFilterCommonService } from './csv/service/csv.filter.common.service';
+import { FilterCommonService } from './filter/services/filter.common.service';
 
 
 @Module({
   controllers: [],
-  providers: [CsvCommonService, CsvFilterCommonService],
-  exports: [CsvCommonService, CsvFilterCommonService]
+  providers: [CsvCommonService, FilterCommonService],
+  exports: [CsvCommonService, FilterCommonService]
 })
 export class CommonModule {}
