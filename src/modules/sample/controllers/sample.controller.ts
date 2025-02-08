@@ -8,14 +8,9 @@ import { UpdateSampleDto } from '../dto/update-sample.dto';
 export class SampleController {
   constructor(private readonly sampleService: SampleService) {}
 
-  @Get()
-  findAll() {
-    return this.sampleService.findAll();
-  }
-
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.sampleService.findOne(+id);
+  @Get('country')
+  findCountryAll() {
+    return this.sampleService.findCountryAll();
   }
 
 }
