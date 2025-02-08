@@ -10,7 +10,6 @@ async function bootstrap() {
 
   app.setGlobalPrefix('api')
 
-  // Obtiene la configuración de CORS desde el servicio
   const corsConfigService = app.get(CorsConfigService);
   const corsOptions = corsConfigService.getCorsConfigOption();
   app.enableCors(corsOptions);
