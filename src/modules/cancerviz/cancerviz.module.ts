@@ -19,6 +19,7 @@ import { CancerType, Cancerviz, ConstructionProtocol, Country, DataSource, Sampl
       ConstructionProtocol,
       Country
     ])
-  ]
+  ],
+  exports: [TypeOrmModule]
 })
 export class CancervizModule {}
