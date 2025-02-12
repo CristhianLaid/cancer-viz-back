@@ -11,7 +11,6 @@ export class CancervizController {
   @Get()
   findAll(
     @Query() query: Record<string, string>,
-    @Query() paginationDto: CommonPaginationDto
   ) {
     const { limit, offset, ...filterQuery } = query;
     const pagination: CommonPaginationDto = {
