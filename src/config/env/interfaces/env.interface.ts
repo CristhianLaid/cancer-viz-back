@@ -6,4 +6,5 @@ export interface IEnvConfig {
     PORT:               number;
     DATABASE_URL:       string;
     NODE_ENV:           string;
+    JWT_STRATEGIES:     string
 };

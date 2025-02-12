@@ -12,6 +12,7 @@ export const validateEnvConfig = (env: NodeJS.ProcessEnv): IEnvConfig => {
         PORT: Number(env.PORT as string),
         DATABASE_URL: env.DATABASE_URL as string,
         NODE_ENV: env.NODE_ENV as string,
+        JWT_STRATEGIES: env.JWT_STRATEGIES as string,
     }
     return config;
 }

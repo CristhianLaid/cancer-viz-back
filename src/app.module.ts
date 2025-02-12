@@ -10,6 +10,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { IEnvConfig } from './config/env/interfaces/env.interface';
 import { CoreModule } from './core/core.module';
 import { CancervizModule } from './modules/cancerviz/cancerviz.module';
+import { AuthModule } from './modules/auth/auth.module';
 
 
 @Module({
@@ -34,6 +35,7 @@ import { CancervizModule } from './modules/cancerviz/cancerviz.module';
     AppConfigModule,
     CoreModule,
     CancervizModule,
+    AuthModule,
   ],
   controllers: [],
   providers: [],
