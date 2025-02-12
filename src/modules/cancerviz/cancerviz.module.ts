@@ -5,12 +5,14 @@ import { CommonModule } from 'src/common/common.module';
 import { CancervizSeedController } from './controllers/cancerviz.seed.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { CancerType, Cancerviz, ConstructionProtocol, Country, DataSource, SampleType } from './entities';
+import { AuthModule } from '../auth/auth.module';
 
 @Module({
   controllers: [CancervizController, CancervizSeedController],
   providers: [CancervizService, CancervizSeedService],
   imports: [
     CommonModule,
+    AuthModule,
     TypeOrmModule.forFeature([
       Cancerviz,
       CancerType,
