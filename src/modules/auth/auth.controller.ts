@@ -26,7 +26,7 @@ export class AuthController {
   }
 
   @Get('check-status')
-  @AuthDecorator('user')
+  @AuthDecorator()
   checkAuth(@getUser() auth: Auth){
     return this.authService.checkAuthStatus(auth)
   }

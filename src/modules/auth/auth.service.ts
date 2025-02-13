@@ -44,7 +44,7 @@ export class AuthService {
     try {
       const auth = await this.authRepository.findOne({
         where: { email },
-        select: { id: true, username: true, email: true, password: true },
+        select: { id: true, username: true, email: true, password: true, roles: true },
       });
       if (!auth)
         throw new UnauthorizedException(
