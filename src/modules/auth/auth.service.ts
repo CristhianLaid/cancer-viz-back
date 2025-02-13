@@ -25,8 +25,10 @@ export class AuthService {
   async create(createAuthDto: CreateAuthDto) {
     const { password, ...dataAuth } = createAuthDto;
     try {
+      const roles = createAuthDto.roles && createAuthDto.roles.length > 0 ? createAuthDto.roles : ['user'];
       const auth = this.authRepository.create({
         password: bcryptPlugin.hasSync(password),
+        roles,
         ...dataAuth,
       });
       await this.authRepository.save(auth);
